@@ -1,7 +1,2 @@
-
-*.vcxproj
-*.sln
-*.vcxproj.filters
-*.vcxproj.user
 Project One/.vs/*
 Project One/bin/*
