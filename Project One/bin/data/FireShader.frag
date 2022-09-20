@@ -9,9 +9,9 @@ void main()
 {
 	vec4 tex = texture(FireTex, fragUV);
 
-	tex.r *= 2.0f;
-	tex.g *= 0.0f;
-	tex.b *= 0.0f;
+	tex.r *= 0.5f;
+	tex.g *= 0.55f;
+	tex.b *= 0.6f;
 	//tex.a *= 2.0f;
 
 	outCol = tex;

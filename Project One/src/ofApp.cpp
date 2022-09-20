@@ -26,7 +26,7 @@ void ofApp::setup(){
 	quad.addIndices(indices, 6);
 
 	ofDisableArbTex();
-	fireImg.load("fire_01.png");
+	fireImg.load("smoke_04.png");
 	fireShader.load("FireShader.vert", "FireShader.frag");
 }
 

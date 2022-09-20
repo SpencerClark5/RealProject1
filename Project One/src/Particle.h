@@ -1,5 +1,7 @@
 #pragma once
-
+#include "ofMain.h"
+#include <stdlib.h>     /* srand, rand */
+using namespace glm;
 // An interface for a particle.
 class Particle
 {
@@ -17,6 +19,10 @@ private:
 
     //lifetime of 1 second ( i hope )
     float lifeTime = 1;
+    int r = rand() % 1001;
+    double xPos = r / 1000.0;
+    double yPos = r / 1000.0;
+    //cannot create a vector here
 };
 
 // An interface for a particle generator that spawns particles of some specific type.
