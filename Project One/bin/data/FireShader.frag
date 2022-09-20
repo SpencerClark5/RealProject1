@@ -7,5 +7,5 @@ in vec2 fragUV;
 out vec4 outCol;
 void main()
 {
-	outCol = texture(FireTex, fragUV);
+	outCol = vec4(1.0,0.0,0.0,1.0);
 }
