@@ -182,6 +182,8 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\Particle.cpp" />
+    <ClCompile Include="src\ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h" />
@@ -200,6 +202,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="bin\data\forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\data\FireShader.frag" />
+    <None Include="bin\data\FireShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>

@@ -7,6 +7,8 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Particle.cpp" />
+    <ClCompile Include="src\ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -23,5 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="bin\data\forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\data\FireShader.vert" />
+    <None Include="bin\data\FireShader.frag" />
   </ItemGroup>
 </Project>
