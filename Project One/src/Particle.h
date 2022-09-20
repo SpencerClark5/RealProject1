@@ -13,6 +13,10 @@ public:
 
     // Updates the particle for a specified time increment (dt).
     virtual void update(float dt) = 0;
+private:
+
+    //lifetime of 1 second ( i hope )
+    float lifeTime = 1;
 };
 
 // An interface for a particle generator that spawns particles of some specific type.
