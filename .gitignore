@@ -1,2 +1,12 @@
 Project One/.vs/*
 Project One\obj\x64\Debug\*
+*.tlog
+*.log
+Project One/bin/Project One_debug.pdb
+*.obj
+*.ilk
+*.res
+*.pdb
+*.recipe
+Project One/bin/Project One_debug.exe
+Project One/bin/Project One_debug.pdb
