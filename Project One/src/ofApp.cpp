@@ -37,6 +37,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	//loop over all of the particle, draw the quads
 	fireShader.begin();
 	fireShader.setUniformTexture("FireTex", fireImg, 0);
 	//triangle.draw();

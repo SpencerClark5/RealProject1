@@ -19,9 +19,8 @@ private:
 
     //lifetime of 1 second ( i hope )
     float lifeTime = 1;
-    int r = rand() % 1001;
-    double xPos = r / 1000.0;
-    double yPos = r / 1000.0;
+    //makes a random position for the particle
+    vec3 pos = vec3( (rand() % 1001)/1000.0 , (rand() % 1001) / 1000.0 , 0);
     //cannot create a vector here
 };
 
