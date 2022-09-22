@@ -15,7 +15,8 @@ public:
 
     // Updates the particle for a specified time increment (dt).
     virtual void update(float dt) = 0;
-private:
+
+    float vel = 10.0;   
 
     //lifetime of 1 second ( i hope )
     float lifeTime = 1;

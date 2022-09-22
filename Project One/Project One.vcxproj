@@ -180,12 +180,14 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\BasicParticle.cpp" />
+    <ClCompile Include="src\BasicParticleGenerator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="src\Particle.cpp" />
-    <ClCompile Include="src\ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\BasicParticle.h" />
+    <ClInclude Include="src\BasicParticleGenerator.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>
   <ItemGroup>

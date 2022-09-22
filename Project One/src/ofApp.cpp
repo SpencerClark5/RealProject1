@@ -1,7 +1,11 @@
 #include "ofApp.h"
+#include "Particle.h"
+#include "ParticleSystem.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	
+
 	ofDisableArbTex();
 
 	quad.addVertex(glm::vec3(-1, -1, 0));
@@ -32,16 +36,26 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	//gets time between frames
+	partSystem.update(ofGetLastFrameTime());
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	//loop over all of the particle, draw the quads
 	fireShader.begin();
+	//loops through each particle for us to access the peices such as:
+	//position
+	for (const BasicParticle& p : partSystem) {
+		fireShader.setUniformTexture("FireTex", fireImg, p.pos.y);
+
+		//fireShader.setUniform1f("FireTex",p.pos.y);
+		quad.draw();
+	}
+	//loop over all of the particle, draw the quads
 	fireShader.setUniformTexture("FireTex", fireImg, 0);
+	//quad.draw();
 	//triangle.draw();
-	quad.draw();
+
 	fireShader.end();
 }
 

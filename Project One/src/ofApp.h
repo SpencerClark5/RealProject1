@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "BasicParticleGenerator.h"
+#include "ParticleSystem.h"
+
 
 class ofApp : public ofBaseApp{
 
@@ -22,6 +25,11 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 private:
+	BasicParticleGenerator particalGen {};
+	//42 is the number of particles
+	//20 is the rate at which they spawn (20 per second)
+	ParticleSystem<BasicParticle> partSystem{particalGen , 42 , 20.0f};
+
 	ofMesh quad{};
 	ofShader fireShader{};
 	ofImage fireImg;
