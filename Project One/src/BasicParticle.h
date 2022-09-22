@@ -12,14 +12,12 @@ public:
     // Updates the particle for a specified time increment (dt).
     virtual void update(float dt) override;
 
-
-
-    float vel = 1000.0;
-
-    //lifetime of 1 second ( i hope )
-
+    float vel = .3;
+    float x = -5 + (rand() % (10 + 1));
+    float y = -5 + (rand() % (10 + 1));
+    float opacity = 1.0f;
     //makes a random position for the particle
-    vec3 pos = vec3((rand() % 10001) / 1.0, (rand() % 10001) / 1.0, 0);
+    vec3 pos = vec3(x / 13, y / 13, 0);
 
 private:
     float lifeTime = 1;

@@ -15,9 +15,9 @@ void BasicParticle::update(float dt)
 {
 	//updates the time left that the particle is on screen
 	//life decreases by .5 every second
+
 	this->lifeTime -= dt * 0.5;
-	float speed = pos.y + std::pow(dt, 1 / 39) * this->vel;
-	this->pos = vec3(pos.x,speed, pos.z);
+	this->pos = vec3(pos.x, pos.y + dt*vel, pos.z);
 	//slowly rise up the position as its lifetime goes down
 
 }

@@ -3,7 +3,10 @@
 void BasicParticleGenerator::respawn(BasicParticle& particle) const
 {	
 	particle.setLife(1.0f);
-	particle.pos = vec3((rand() % 10001) / 1.0, (rand() % 10001) / 1.0, 0);
+	float x = -5 + (rand() % (10 + 1));
+	float y = -5 + (rand() % (10 + 1));
+
+	particle.pos = vec3(x/13,y/13,0);
 
 	//randomize things
 }

@@ -4,7 +4,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	
 
 	ofDisableArbTex();
 
@@ -43,18 +42,16 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	fireShader.begin();
-	//loops through each particle for us to access the peices such as:
-	//position
+	ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ALPHA);
+	//loops through each particle for us to access the pieces
 	for (const BasicParticle& p : partSystem) {
-		fireShader.setUniformTexture("FireTex", fireImg, p.pos.y);
-
-		//fireShader.setUniform1f("FireTex",p.pos.y);
+		fireShader.setUniformTexture("FireTex", fireImg, 0);
+		mat4 translationA = translate(vec3(p.pos));
+		mat4 scaleA = scale(vec3(.6, .75, 1));
+		mat4 transform = translationA * scaleA;
+		fireShader.setUniformMatrix4f("transform", transform);
 		quad.draw();
 	}
-	//loop over all of the particle, draw the quads
-	fireShader.setUniformTexture("FireTex", fireImg, 0);
-	//quad.draw();
-	//triangle.draw();
 
 	fireShader.end();
 }
