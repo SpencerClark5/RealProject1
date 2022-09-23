@@ -27,9 +27,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="bin\data\forest.png" />
+    <Image Include="bin\data\spark_05.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\data\FireShader.vert" />
     <None Include="bin\data\FireShader.frag" />
+    <None Include="bin\data\BoltShader.vert" />
+    <None Include="bin\data\BoltShader.frag" />
   </ItemGroup>
 </Project>

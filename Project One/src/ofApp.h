@@ -24,13 +24,29 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+
 private:
-	BasicParticleGenerator particalGen {};
-	//10 is the number of particles
-	//40 is the rate at which they spawn (20 per second)
-	ParticleSystem<BasicParticle> partSystem{particalGen , 102 , 40.0f};
+	ofMesh Lquad{};
+	ofShader boltShader{};
+	ofImage boltImg{};
+	ofImage boltImg2{};
 
 	ofMesh quad{};
 	ofShader fireShader{};
-	ofImage fireImg;
+	ofImage fireImg{};
+	ofImage fireImg2{};
+
+	ofImage cloudTexture[2];
+	ofImage boltTexture[2];
+
+	BasicParticleGenerator particalGen {};
+	//10 is the number of particles
+	//40 is the rate at which they spawn (20 per second)
+	ParticleSystem<BasicParticle> partSystem{particalGen , 1002 , 40.0f};
+
+	BasicParticleGenerator boltGen{};
+
+	ParticleSystem<BasicParticle> boltParticleSystem{ boltGen, 100, 1.5 };
+
+
 };

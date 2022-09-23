@@ -9,16 +9,18 @@ public:
 
     void setLife(float life);
 
+    virtual int getTexture() const;
+
     // Updates the particle for a specified time increment (dt).
     virtual void update(float dt) override;
 
-    float vel = .3;
     float x = -5 + (rand() % (10 + 1));
     float y = -5 + (rand() % (10 + 1));
     //spawns mostly transparent
     float opacity;
     //makes a random position for the particle
     vec3 pos = vec3(x / 13, y / 13, 0);
+    int texture = rand() % 2;
 
 private:
     float lifeTime = 1.0f;
