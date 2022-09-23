@@ -41,15 +41,17 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ADD);
 	fireShader.begin();
-	ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ALPHA);
 	//loops through each particle for us to access the pieces
 	for (const BasicParticle& p : partSystem) {
+		fireShader.setUniform1f("opacity", p.opacity);
 		fireShader.setUniformTexture("FireTex", fireImg, 0);
 		mat4 translationA = translate(vec3(p.pos));
 		mat4 scaleA = scale(vec3(.6, .75, 1));
 		mat4 transform = translationA * scaleA;
 		fireShader.setUniformMatrix4f("transform", transform);
+
 		quad.draw();
 	}
 

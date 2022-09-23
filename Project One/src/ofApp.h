@@ -26,9 +26,9 @@ class ofApp : public ofBaseApp{
 		
 private:
 	BasicParticleGenerator particalGen {};
-	//42 is the number of particles
-	//20 is the rate at which they spawn (20 per second)
-	ParticleSystem<BasicParticle> partSystem{particalGen , 42 , 20.0f};
+	//10 is the number of particles
+	//40 is the rate at which they spawn (20 per second)
+	ParticleSystem<BasicParticle> partSystem{particalGen , 102 , 40.0f};
 
 	ofMesh quad{};
 	ofShader fireShader{};
